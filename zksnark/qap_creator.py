@@ -96,7 +96,7 @@ def create_divisor_polynomial(sol, Z):
         assert abs(x) < 10**-10
     return quot
 
-r = [1, 3, 39, 9, 27, 9, 36]
+r = [1, 2, 15, 4, 8, 4, 12]
 A = [[0, 1, 0, 0, 0, 0, 0],
      [0, 0, 0, 1, 0, 0, 0],
      [0, 1, 0, 0, 0, 0, 0],
