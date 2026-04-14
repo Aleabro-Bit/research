@@ -210,15 +210,15 @@ def assign_variables(inputs, input_vars, flatcode):
 
 def code_to_r1cs_with_inputs(code, input_vars):
     inputs, body = extract_inputs_and_body(parse(code))
-    print 'Inputs'
-    print inputs
-    print 'Body'
-    print body
+    print('Inputs')
+    print(inputs)
+    print('Body')
+    print(body)
     flatcode = flatten_body(body)
-    print 'Flatcode'
-    print flatcode
-    print 'Input var assignment'
-    print get_var_placement(inputs, flatcode)
+    print('Flatcode')
+    print(flatcode)
+    print('Input var assignment')
+    print(get_var_placement(inputs, flatcode))
     A, B, C = flatcode_to_r1cs(inputs, flatcode)
     r = assign_variables(inputs, input_vars, flatcode)
     return r, A, B, C
@@ -226,13 +226,14 @@ def code_to_r1cs_with_inputs(code, input_vars):
 r, A, B, C = code_to_r1cs_with_inputs("""
 def qeval(x):
     y = x**3
-    return y + x + 5
+    z = x**2
+    return y + z + 3
 """, [3])
-print 'r'
-print r
-print 'A'
-for x in A: print x
-print 'B'
-for x in B: print x
-print 'C'
-for x in C: print x
+print('r')
+print(r)
+print('A')
+for x in A: print(x)
+print('B')
+for x in B: print(x)
+print('C')
+for x in C: print(x)
